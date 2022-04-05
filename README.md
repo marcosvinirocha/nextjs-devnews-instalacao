@@ -1,4 +1,4 @@
-##Rodando a aplicação no seu PC 
+## Rodando a aplicação no seu PC 
 
 Faça um clone deste repositório e instale no seu ambiente de desenvolvimento usando o seguinte comando no seu terminal (escolha um diretório apropriado):
 
