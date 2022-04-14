@@ -12,14 +12,14 @@
           "placeholder": ""
         }
       },
-      "Title": {
+      "title": {
         "type": "Text",
         "config": {
           "label": "Title",
           "placeholder": ""
         }
       },
-      "Content": {
+      "content": {
         "type": "StructuredText",
         "config": {
           "label": "Content",
