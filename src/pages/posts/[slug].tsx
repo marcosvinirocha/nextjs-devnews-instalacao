@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import SEO from '../../components/Header/SEO';
 import styles from './post.module.scss';
 import Prismic from '@prismicio/client';
+import { RichText } from 'prismic-dom';
 import { getPrismicClient } from '../../services/prismic';
 
 interface PostProps {
@@ -50,7 +51,7 @@ export const getStaticProps: GetStaticProps = async context => {
   const post = {
     slug,
     title: response.data.title,
-    content: response.data.title,
+    content: RichText.asText(response.data.content),
     update: new Date(response.last_publication_date).toLocaleDateString(
       'pt-BR',
       {
@@ -60,6 +61,7 @@ export const getStaticProps: GetStaticProps = async context => {
       },
     ),
   };
+  console.log(response.data);
 
   return {
     props: {
